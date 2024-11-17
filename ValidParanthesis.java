@@ -3,7 +3,7 @@ import java.util.Stack;
 interface ValidPI{
 	public abstract boolean isValidParanthesis(String paranthesis);
 	public static boolean isMatchedPair(char open , char close){
-		return ((open == '[' && close == ']')||(open == '(' && close == ')')||(open == '{' && close == '}'));
+	return ((open == '[' && close == ']')||(open == '(' && close == ')')||(open == '{' && close == '}'));
 	}
 }
 public class ValidParanthesis{
@@ -13,14 +13,14 @@ public class ValidParanthesis{
 			String paranthesis = sc.next();
 
 			 if (!paranthesis.matches("[(){}\\[\\]]*")) {
-                System.out.println("Invalid input! Please enter only valid parentheses.");
-                return;
+                             System.out.println("Invalid input! Please enter only valid parentheses.");
+                             return;
             }
 
 			ValidPI vpi = (str)->{
 				                   Stack<Character> stack = new Stack<Character>();
 
-                                   for (char ch : str.toCharArray()) {
+                                     for (char ch : str.toCharArray()) {
                                    	   
                                    	   if(ch == '(' || ch == '[' || ch == '{'){
                                    	   	 stack.push(ch);
